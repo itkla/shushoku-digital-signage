@@ -71,6 +71,30 @@ app.get('/api/data', async (req, res) => {
                     </div>
                 );
 
+            case 3: // Supporting content for 作品概要
+                return (
+                    <div className="flex flex-col items-center justify-center w-full h-full bg-white p-8">
+                        <div className="flex items-end justify-center w-full h-full pb-12">
+                            <div className="flex space-x-8 items-end">
+                                <div className="relative overflow-hidden" style={{ height: '60vh' }}>
+                                    <div className="absolute bottom-0 left-0 bg-gray-300 w-64 h-96" style={{ transform: 'translateY(40%)' }}>
+                                        {/* Image placeholder - only top 60% visible */}
+                                        <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                            Image Placeholder
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="w-64 pb-8">
+                                    <div className="bg-gray-100 p-4 rounded-lg">
+                                        <h3 className="text-xl font-semibold mb-2">Image Caption</h3>
+                                        <p className="text-sm">Text content to be displayed next to the image that extends off the bottom of the screen.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                );
+
             case 4: // Supporting content for 技術的特徴
                 return (
                     <div className="flex flex-col items-center justify-center w-full h-full bg-gray-100 p-8">
@@ -93,30 +117,42 @@ app.get('/api/data', async (req, res) => {
                     </div>
                 );
 
+            case 5: // Supporting content for 主要機能
+                return (
+                    <div className="flex flex-col items-center justify-center w-full h-full bg-white p-8">
+                        <div className="relative w-full">
+                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gray-300 w-full max-w-2xl" style={{ height: '80vh', transform: 'translateY(-40%) translateX(-50%)' }}>
+                                {/* Image placeholder - only bottom half visible */}
+                                <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                    Image Placeholder
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                );
+
             case 6: // Supporting content for 開発プロセス
                 return (
-                    <div className="flex flex-col items-center justify-center w-full h-full bg-gray-100 p-8">
-                        <h3 className="text-2xl font-semibold mb-6">開発タイムライン</h3>
-                        <div className="space-y-6 w-full max-w-3xl">
-                            <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow">
-                                <div className="bg-blue-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">1月</div>
-                                <div>
-                                    <h4 className="font-semibold">要件定義</h4>
-                                    <p className="text-sm text-gray-600">基本設計と技術選定</p>
+                    <div className="flex flex-col items-center justify-center w-full h-full bg-white p-8">
+                        <div className="relative w-full">
+                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gray-300 w-full max-w-2xl" style={{ height: '80vh', transform: 'translateY(-40%) translateX(-50%)' }}>
+                                {/* Image placeholder - only bottom half visible */}
+                                <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                    Image Placeholder
                                 </div>
                             </div>
-                            <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow">
-                                <div className="bg-green-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">2月</div>
-                                <div>
-                                    <h4 className="font-semibold">開発フェーズ</h4>
-                                    <p className="text-sm text-gray-600">実装とテスト</p>
-                                </div>
-                            </div>
-                            <div className="flex items-center space-x-4 bg-white p-4 rounded-lg shadow">
-                                <div className="bg-purple-500 text-white w-12 h-12 rounded-full flex items-center justify-center font-bold">3月</div>
-                                <div>
-                                    <h4 className="font-semibold">完成・発表</h4>
-                                    <p className="text-sm text-gray-600">最終調整とプレゼン準備</p>
+                        </div>
+                    </div>
+                );
+
+            case 7: // Supporting content for 今後の展望
+                return (
+                    <div className="flex flex-col items-center justify-center w-full h-full bg-white p-8">
+                        <div className="relative w-full">
+                            <div className="absolute top-0 left-1/2 transform -translate-x-1/2 bg-gray-300 w-full max-w-2xl" style={{ height: '80vh', transform: 'translateY(-40%) translateX(-50%)' }}>
+                                {/* Image placeholder - only bottom half visible */}
+                                <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                    Image Placeholder
                                 </div>
                             </div>
                         </div>
@@ -131,15 +167,15 @@ app.get('/api/data', async (req, res) => {
                             <div className="space-y-4">
                                 <div className="flex items-center space-x-3">
                                     <span className="text-gray-600">Email:</span>
-                                    <span className="font-en">contact@example.com</span>
+                                    <span className="font-en">hunternakagawa@gmail.com</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <span className="text-gray-600">GitHub:</span>
-                                    <span className="font-en">github.com/username</span>
+                                    <span className="font-en">github.com/itkla</span>
                                 </div>
                                 <div className="flex items-center space-x-3">
                                     <span className="text-gray-600">Portfolio:</span>
-                                    <span className="font-en">portfolio.example.com</span>
+                                    <span className="font-en">klae.ooo</span>
                                 </div>
                             </div>
                         </div>
@@ -175,62 +211,18 @@ app.get('/api/data', async (req, res) => {
         case 2:
             return (
                 <div className="flex flex-col items-center justify-center w-full h-full bg-white">
-                    {/* Checkpoint Website Component */}
                     <div className="font-sans w-full">
-                        {/* Section 1: Login */}
                         <div className="flex justify-between items-start my-8 px-4 md:px-8 lg:px-16">
                             <div className="max-w-xl">
-                                <h1 className="text-4xl font-bold mb-8">
+                                <h1 className="text-6xl font-bold mb-8">
                                     <span className="text-black">簡単、安全、</span>
                                     <span className="text-blue-500">次代</span>
                                     <span className="text-black">。</span>
                                 </h1>
-                                <p className="text-lg mb-6">
-                                    ウェブサイトに簡単にログインできるように<br />
-                                    しましょう。ログインが複雑である理由は<br />
-                                    ないはずだ。Checkpointは、『簡単』『安全』『次代』<br />
-                                    という3つの主要な理念を基盤として構築されています。私は、現在の日本の認証システムが老朽化していることで、<br />
-                                    人々の情報が深刻な危険にさらされていると考えています。<br/>
-                                    そのため、Checkpointでは最新の技術を取り入れて<br/>
-                                    セキュリティを強化しつつ、操作がシンプルで使いやすい<br/>
-                                    デザインを重視して開発しました。
+                                <p className="text-2xl mb-6">
+                                    ウェブサイトに簡単にログインできるようにしましょう。ログインが複雑である理由はないはずだ。Checkpointは、『簡単』『安全』『次代』という3つの主要な理念を基盤として構築されています。私は、現在の日本の認証システムが老朽化していることで、人々の情報が深刻な危険にさらされていると考えています。そのため、Checkpointでは最新の技術を取り入れてセキュリティを強化しつつ、操作がシンプルで使いやすいデザインを重視して開発しました。
                                 </p>
                             </div>
-
-                            {/* <div className="bg-white shadow-lg rounded-lg p-6 w-80">
-                                <h2 className="text-xl font-bold mb-4">ログイン</h2>
-                                <div className="mb-4">
-                                    <label className="block text-sm text-gray-600 mb-1">メールアドレス</label>
-                                    <input type="email" className="w-full border border-gray-300 rounded p-2" />
-                                </div>
-                                <div className="mb-4">
-                                    <div className="flex justify-between items-center mb-1">
-                                        <label className="block text-sm text-gray-600">パスワード</label>
-                                        <a href="#" className="text-sm text-blue-500">パスワード忘れた</a>
-                                    </div>
-                                    <input type="password" className="w-full border border-gray-300 rounded p-2" />
-                                </div>
-                                <button className="w-full bg-blue-500 text-white py-2 rounded mb-4">ログイン</button>
-                                <button className="w-full bg-gray-400 text-white py-2 rounded mb-4">Passkeyでログイン</button>
-
-                                <div className="text-center text-sm text-gray-500 mb-4">
-                                    <p>アカウント持ってない？ 今すぐ登録</p>
-                                    <p className="my-2">または</p>
-                                </div>
-
-                                <div className="flex justify-between">
-                                    <button className="flex items-center justify-center border border-gray-300 rounded p-2 w-[48%]">
-                                        <span className="mr-2">G</span> Google
-                                    </button>
-                                    <button className="flex items-center justify-center border border-gray-300 rounded p-2 w-[48%]">
-                                        <span className="mr-2">L</span> LINE
-                                    </button>
-                                </div>
-
-                                <p className="text-xs text-gray-500 mt-4">
-                                    続行すると、利用規約とプライバシーポリシーに同意することとします。
-                                </p>
-                            </div> */}
                         </div>
                     </div>
                 </div>
@@ -238,39 +230,57 @@ app.get('/api/data', async (req, res) => {
 
         case 3:
             return (
-                <div className="flex flex-col items-center justify-start w-full h-full bg-white p-8">
-                    <h2 className="text-4xl font-bold mb-8">作品概要</h2>
-                    <div className="space-y-6 text-xl">
-                        <h3 className="text-3xl font-semibold mb-4">デジタルサイネージシステム</h3>
-                        <ul className="list-disc list-inside space-y-4">
-                            <li>Next.jsを使用した最新のWeb技術</li>
-                            <li>リアルタイムの同期機能</li>
-                            <li>スムーズなアニメーション</li>
-                            <li>レスポンシブデザイン</li>
-                        </ul>
+                <div className="flex flex-col items-center justify-center w-full h-full bg-white">
+                    <div className="font-sans w-full">
+                        <div className="flex justify-between items-start my-8 px-4 md:px-8 lg:px-16">
+                            <div className="max-w-xl">
+                                <h1 className="text-6xl font-bold mb-8">
+                                    <span className="text-black">実現可能な</span>
+                                    <span className="text-green-500">将来像</span>
+                                </h1>
+                                <p className="text-2xl mb-6">
+                                    パスワードは時代遅れになるつつあります。<br />
+                                    未来は安全になりそうだって、そして<span className="font-bold">あなた</span><br />
+                                    が鍵となります。
+                                </p>
+                                <p className="text-2xl mb-6">
+                                パスキーを通じて、個人を鍵として使うという、これまでには考えられなかったセキュリティのレベルを実現することができます。 iPhoneやMacBookのようなデバイスはFace IDを使用できるようになり、Androidデバイスは指紋を使用できるようになりました。また、パスキーに加え、カメラが設置されている場所であればどこでも利用可能な顔認証機能の導入も予定しています。
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             );
 
         case 4:
             return (
-                <div className="flex flex-col items-start justify-start w-full h-full bg-white p-8">
-                    <h2 className="text-4xl font-bold mb-8 self-center">技術的特徴</h2>
-                    <div className="space-y-6 text-xl w-full">
-                        <div className="border-b pb-4">
-                            <h3 className="text-2xl font-semibold mb-4">フロントエンド</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li><span className="font-en">React & Next.js</span></li>
-                                <li><span className="font-en">TypeScript</span></li>
-                                <li><span className="font-en">Tailwind CSS</span></li>
-                            </ul>
-                        </div>
-                        <div className="border-b pb-4">
-                            <h3 className="text-2xl font-semibold mb-4">状態管理 & 同期</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li><span className="font-en">Zustand</span></li>
-                                <li><span className="font-en">BroadcastChannel API</span></li>
-                            </ul>
+                <div className="flex flex-col items-center justify-center w-full h-full bg-white">
+                    <div className="font-sans w-full">
+                        <div className="flex justify-between items-start my-8 px-4 md:px-8 lg:px-16">
+                            <div className="max-w-xl">
+                                <h1 className="text-6xl font-bold mb-8">
+                                    優雅な管理
+                                </h1>
+                                <p className="text-2xl mb-6">
+                                    管理は簡単であるべきで、それをするのが楽
+                                    しみであるべきだ。ダッシュボードを複雑
+                                    にしすぎると、トラブルやスピードダウンが
+                                    発生する。だから、シンプルでパワフルな
+                                    ダッシュボードこそ、仕事を続けるために必
+                                    要なものなのだ。
+                                </p>
+                                <p className="text-2xl mb-6">
+                                そのために、ダッシュボードはシンプルに構成されていますが、ユーザーを効果的に管理するのに十分強力です。ダッシュボードからは、UIからバックエンドに至るまで、Checkpointにかかわるあらゆる要素を管理できます。ユーザーの管理はもちろん、必要に応じて外部のデータソースをCheckpointに連携し、追加の情報や関連性を表示することも可能です。
+                                </p>
+                            </div>
+                            <div className="relative" style={{ width: '40vw', height: '60vh' }}>
+                                <div className="absolute top-0 left-0 bg-gray-300 w-96 h-96" style={{ transform: 'translateX(-20%)' }}>
+                                    {/* Image placeholder - overflowing to the right */}
+                                    <div className="w-full h-full flex items-center justify-center text-gray-600">
+                                        Image Placeholder
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -278,24 +288,24 @@ app.get('/api/data', async (req, res) => {
 
         case 5:
             return (
-                <div className="flex flex-col items-center justify-start w-full h-full bg-white p-8">
-                    <h2 className="text-4xl font-bold mb-8">主要機能</h2>
-                    <div className="grid grid-cols-1 gap-6 text-xl w-full max-w-3xl">
-                        <div className="bg-gray-50 p-6 rounded-lg">
-                            <h3 className="text-2xl font-semibold mb-4">コントローラー画面</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li>キーボードナビゲーション</li>
-                                <li>スライド進行状況の表示</li>
-                                <li>プレビュー機能</li>
-                            </ul>
-                        </div>
-                        <div className="bg-gray-50 p-6 rounded-lg">
-                            <h3 className="text-2xl font-semibold mb-4">ディスプレイ画面</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li>縦型ディスプレイ最適化</li>
-                                <li>スムーズな遷移アニメーション</li>
-                                <li>高解像度対応</li>
-                            </ul>
+                <div className="flex flex-col items-center justify-center w-full h-full bg-white">
+                    <div className="font-sans w-full">
+                        <div className="flex justify-between items-start my-8 px-4 md:px-8 lg:px-16">
+                            <div className="max-w-xl">
+                                <h1 className="text-6xl font-bold mb-8">
+                                    <span className="text-black">簡単に顧客を</span>
+                                    <span className="text-blue-500">集める</span>
+                                </h1>
+                                <p className="text-2xl mb-6">
+                                    顧客に選択肢を提示して、あなたとの取引を
+                                    よりスムーズにしましょう。どの情報を共有
+                                    するかを顧客自身が納得した上で選べるよう
+                                    にすることで、あなたの企業への信頼感が高
+                                    まります。
+                                    「摩擦を減らす＝顧客が増える＝ビジネスが
+                                    拡大する」という流れを意識しましょう。
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -303,24 +313,26 @@ app.get('/api/data', async (req, res) => {
 
         case 6:
             return (
-                <div className="flex flex-col items-center justify-start w-full h-full bg-white p-8">
-                    <h2 className="text-4xl font-bold mb-8">開発プロセス</h2>
-                    <div className="space-y-8 text-xl w-full max-w-3xl">
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-blue-100 p-4 rounded-full">1</div>
-                            <p>要件定義とデザイン設計</p>
-                        </div>
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-blue-100 p-4 rounded-full">2</div>
-                            <p>フロントエンド開発</p>
-                        </div>
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-blue-100 p-4 rounded-full">3</div>
-                            <p>同期機能の実装</p>
-                        </div>
-                        <div className="flex items-center space-x-4">
-                            <div className="bg-blue-100 p-4 rounded-full">4</div>
-                            <p>テストと最適化</p>
+                <div className="flex flex-col items-center justify-center w-full h-full bg-white">
+                    <div className="font-sans w-full">
+                        <div className="flex justify-between items-start my-8 px-4 md:px-8 lg:px-16">
+                            <div className="max-w-xl">
+                                <h1 className="text-6xl font-bold mb-8">
+                                    <span className="text-red-500">なぜ</span>
+                                    <span className="text-black font-en">Checkpoint</span>
+                                    <span className="text-black">？</span>
+                                </h1>
+                                <p className="text-2xl mb-6">
+                                    業界トップクラスの暗号化、破られないハッ
+                                    シュアルゴリズム、そして保存データの暗号
+                                    化が利用できます。さらに、指紋やFace ID
+                                    といった生体認証を活用したパスキーや、
+                                    SNSアカウントを連携してワンクリックで登
+                                    録できる機能など、最新テクノロジーを顧客
+                                    に提供することも可能です。セキュリティは
+                                    Checkpointにお任せください。
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -328,24 +340,25 @@ app.get('/api/data', async (req, res) => {
 
         case 7:
             return (
-                <div className="flex flex-col items-center justify-start w-full h-full bg-white p-8">
-                    <h2 className="text-4xl font-bold mb-8">今後の展望</h2>
-                    <div className="space-y-6 text-xl max-w-3xl">
-                        <div className="bg-gray-50 p-6 rounded-lg mb-6">
-                            <h3 className="text-2xl font-semibold mb-4">機能拡張</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li>複数ディスプレイ対応</li>
-                                <li>インタラクティブ要素の追加</li>
-                                <li>カスタマイズ機能の強化</li>
-                            </ul>
-                        </div>
-                        <div className="bg-gray-50 p-6 rounded-lg">
-                            <h3 className="text-2xl font-semibold mb-4">技術的改善</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li>パフォーマンス最適化</li>
-                                <li>セキュリティ強化</li>
-                                <li>APIの拡充</li>
-                            </ul>
+                <div className="flex flex-col items-center justify-center w-full h-full bg-white">
+                    <div className="font-sans w-full">
+                        <div className="flex justify-between items-start my-8 px-4 md:px-8 lg:px-16">
+                            <div className="max-w-xl">
+                                <h1 className="text-6xl font-bold mb-8">
+                                    <span className="text-green-500">良い</span>
+                                    <span className="text-black">コスパ</span>
+                                </h1>
+                                <p className="text-2xl mb-6">
+                                    自社向けのソリューションに投資してセキュ
+                                    リティ維持のコストを負担する代わりに、
+                                    ユーザー認証と管理に特化したSaaSへアウ
+                                    トソースすれば、コストを大幅に抑えること
+                                    ができます。
+                                    オーバーヘッドを減らしてセキュリティを強
+                                    化——これはなかなか魅力的な選択肢ではな
+                                    いでしょうか。
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -356,9 +369,9 @@ app.get('/api/data', async (req, res) => {
                 <div className="flex flex-col items-center justify-center w-full h-full bg-white p-8">
                     <h2 className="text-5xl font-bold mb-12">ご清聴ありがとうございました</h2>
                     <div className="text-2xl space-y-4">
-                        <p>中川 翔太</p>
-                        <p>HAL大阪</p>
-                        <p>2024年3月</p>
+                        <p>中川 ハンター</p>
+                        <p>HAL東京 Web学科</p>
+                        <p>2025年3月</p>
                     </div>
                 </div>
             );
