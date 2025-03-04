@@ -24,7 +24,7 @@ interface SlideState {
 // Create the slide store
 export const useSlideStore = create<SlideState>((set, get) => ({
   currentSlide: 0,
-  totalSlides: 9,
+  totalSlides: 10,
   transitionDirection: 'right',
   lastDisplaySlide: 0,
   
@@ -35,36 +35,40 @@ export const useSlideStore = create<SlideState>((set, get) => ({
       controller: 'default',
     },
     1: {
-      disp1: 'slide1', // 自己紹介
+      disp1: 'slide1',
       controller: null, // Dark screen
     },
     2: {
-      disp1: 'slide2', // スキル (Main content)
+      disp1: 'slide2',
       controller: 'controller2', // Code samples and project screenshots
     },
     3: {
-      disp1: 'slide3', // 作品概要
-      controller: null, // Dark screen
+      disp1: 'slide3',
+      controller: null,
     },
     4: {
-      disp1: 'slide4', // 技術的特徴 (Main content)
+      disp1: 'slide4',
       controller: 'controller4', // Architecture diagram
     },
     5: {
-      disp1: 'slide5', // 主要機能
-      controller: null, // Dark screen
+      disp1: 'slide5',
+      controller: 'controller5',
     },
     6: {
-      disp1: 'slide6', // 開発プロセス (Main content)
+      disp1: 'slide6',
       controller: 'controller6', // Timeline and milestones
     },
     7: {
-      disp1: 'slide7', // 今後の展望
+      disp1: 'slide7',
       controller: null, // Dark screen
     },
     8: {
-      disp1: 'slide8', // お礼
-      controller: 'controller8', // Contact information and links
+      disp1: 'slide8',
+      controller: 'controller8', // Dark screen
+    },
+    9: {
+      disp1: 'slide9', // お礼
+      controller: 'controller9', // Contact information and links
     },
   },
   

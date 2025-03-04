@@ -38,7 +38,7 @@ export default function ControllerPage() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center relative bg-white text-black overflow-hidden">
       {/* Main content area */}
-      <div className={`w-full h-[calc(100vh-64px)] flex items-center justify-center overflow-hidden ${!showContent ? 'bg-black' : 'bg-white'}`}>
+      <div className={`w-full h-[calc(100vh)] flex items-center justify-center overflow-hidden ${!showContent ? 'bg-black' : 'bg-white'}`}>
         {showContent ? (
           <SlideContent slideId={currentContent} isPortrait={false} />
         ) : (
